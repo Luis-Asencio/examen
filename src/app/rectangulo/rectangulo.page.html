@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Área del Rectángulo
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label position="floating">Base</ion-label>
+    <ion-input type="number" [(ngModel)]="base" required></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Altura</ion-label>
+    <ion-input type="number" [(ngModel)]="altura" required></ion-input>
+  </ion-item>
+
+  <ion-row>
+    <ion-col>
+      <ion-button expand="full" (click)="calcularArea()">Calcular Área</ion-button>
+    </ion-col>
+    <ion-col>
+      <ion-button expand="full" color="danger" (click)="borrarDatos()">Borrar</ion-button>
+    </ion-col>
+  </ion-row>
+
+  <div *ngIf="area">
+    <h2>Área: {{ area }} m²</h2>
+  </div>
+</ion-content>
